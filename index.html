@@ -1,382 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Allan Muir</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allan Muir Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Dialogflow Chatbot CSS -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+
+  <!-- Internal CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header Section with Navigation -->
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="./resummeeeeee/assets/headshot2.png" alt="Allan Muir Icon" class="logo-icon">
+        <div class="logo">Allan Muir</div>
+        <button class="hamburger-icon" onclick="toggleMenu()">
+          &#9776; <!-- Hamburger Icon -->
+        </button>
       </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Allan Muir</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+  </header>
+
+  <!-- Main Content in One-Page Format -->
+  <main class="main-container">
+    <!-- Profile Section -->
+    <section id="profile" class="content-section">
+      <img src="./resummeeeeee/assets/newheadshot.png" alt="Allan Muir profile picture" class="profile-image" />
+      <h1>Allan Muir</h1>
+      <p>Frontend Developer</p>
+      <button onclick="downloadCV()">Download CV</button>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/allan-muir-627455116/" target="_blank">
+          <img src="./resummeeeeee/assets/linkedin.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/muirallan" target="_blank">
+          <img src="./resummeeeeee/assets/github.png" alt="GitHub" class="social-icon">
+        </a>
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./resummeeeeee/assets/newheadshot.png" alt="Allan Muir profile picture" />
+      <p>Welcome to a passionate frontend developer from Jamaica with a talent for design and interactivity. I’m always eager to explore new technology, thrive on building apps and projects from the ground up, and am highly dedicated to solving complex problems. <strong>I have a deep interest in AI</strong>, focusing on creating and tailoring intelligent solutions to fit various needs. I prioritize user experience and am known for my strong work ethic. Additionally, I enjoy jogging and am a big fan of rock, pop, and EDM music.</p>
+    </section>
+
+  <!-- Experience Section -->
+<section id="experience" class="content-section">
+  <h2>Experience</h2>
+  <div class="experience-container">
+    <!-- Experience Item 1 -->
+    <div class="experience-item">
+      <img src="./resummeeeeee/assets/experience.png" alt="Experience icon" class="experience-icon" />
+      <h3>Frontend Development</h3>
+      <p>With 2+ years of experience, I am proficient in HTML, CSS, JavaScript, and have experience with React, Node.js, and more.</p>
+    </div>
+    <!-- Experience Item 2 -->
+    <div class="experience-item">
+      <img src="./resummeeeeee/assets/education.png" alt="Education icon" class="experience-icon" />
+      <h3>Education</h3>
+      <p>B.Sc. in Information Technology and an M.Sc. in Computer Science, providing a solid foundation for my technical skills.</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section project-cards">
+      <div class="project-card">
+        <img src="./resummeeeeee/assets/INotus_logoUDC 2.png" alt="INotus Project" class="project-image">
+        <h3>INotus</h3>
+        <p>A productivity app for note-taking.</p>
+        <a href="inotus.html" class="btn project-btn">View Project</a>
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Allan Muir</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./resummeeeeee/assets/muir,Allan2024.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./resummeeeeee/assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/allan-muir-627455116/'"
-          />
-          <img
-            src="./resummeeeeee/assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/muirallan'"
-          />
-        </div>
+      <div class="project-card">
+        <img src="./resummeeeeee/assets/deliber eats logo.png" alt="Deliber Eats Project" class="project-image">
+        <h3>Deliber Eats</h3>
+        <p>A food delivery app with a social twist.</p>
+        <a href="deliber-eats.html" class="btn project-btn">View Project</a>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="/resummeeeeee/assets/headshot2.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./resummeeeeee/assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./resummeeeeee/assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Information TechnologyDegree<br />M.Sc. Computer Science</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Allan is a problem solving extravert that ailing from the island 
-              of Jamaica ex track star current Felix the Firebird student ambassador, 
-              student center graphic designer and new  appointed RA at the vanness campus dorm.
-            Allan loves to jogg  and listen to Dancehall, trap and EDM music.  For any concerns 
-            DONT BE A STRANGER DONT JUST VIST WHEN YOUR IN DANGER  Allan motivation 
-            “No Regrets what ever happens in life only builds you and make you stronger. 
-            Favorite song stronger by Kanye West  favorite Movie Pirates of the Caribbean.
-            </p>
-          </div>
-        </div>
+  </main>
+
+  <!-- Contact Section with Form -->
+  <section id="contact" class="content-section">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xrbgppok" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
       </div>
-      <img
-        src="./resummeeeeee/assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./resummeeeeee/assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" required>
       </div>
-      <img
-        src="./resummeeeeee/assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="/resummeeeeee/assets/INotus_logoUDC 2.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./resummeeeeee/assets/deliber eats logo.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./resummeeeeee/assets/frauid gauad.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
       </div>
-      <img
-        src="./resummeeeeee/assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="/resummeeeeee/assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:Muir.allan701@gmail.com">Muir.allan701@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./resummeeeeee/assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Allan Muir. All Rights Reserved to Tukey Man.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      <label>
+        Upload a  file (optional):
+        <input type="file" name="upload">
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Thank you for reaching out! I look forward to connecting with you and discussing how we can work together.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Allan Muir. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Dialogflow Chatbot Integration -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-icon="https://upload.wikimedia.org/wikipedia/commons/4/4e/Help_icon.png"
+    chat-title="Allan's Assistant"
+    agent-id="3f632e59-949c-49d9-a314-6cbce359db23"
+    language-code="en"
+    project-id="bubbly-dynamo-404601">
+  </df-messenger>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
