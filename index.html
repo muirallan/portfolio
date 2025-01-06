@@ -1,138 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allan Muir Portfolio</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allan Muir Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  </head>
+  <body class="light-mode">
+  
+    <!-- Header Section with Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img src="./resummeeeeee/assets/headshot2.png" alt="Allan Muir Icon" class="logo-icon">
+          <span class="logo-text">Allan Muir</span>
+        </div>
+        <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Dialogflow Chatbot CSS -->
-  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-
-  <!-- Internal CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <!-- Header Section with Navigation -->
-  <header>
-    <nav>
-      <div class="logo-container">
-        <img src="./resummeeeeee/assets/headshot2.png" alt="Allan Muir Icon" class="logo-icon">
-        <div class="logo">Allan Muir</div>
-        <button class="hamburger-icon" onclick="toggleMenu()">
-          &#9776; <!-- Hamburger Icon -->
-        </button>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Light/Dark Mode">🌞 Light Mode</button>
+  
+<!-- Image Carousel Section -->
+    <section id="image-carousel" class="carousel">
+      <div class="carousel-container" id="carousel-container">
+        <!-- Images will be dynamically added by JavaScript -->
       </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main Content in One-Page Format -->
-  <main class="main-container">
-    <!-- Profile Section -->
-    <section id="profile" class="content-section">
-      <img src="./resummeeeeee/assets/newheadshot.png" alt="Allan Muir profile picture" class="profile-image" />
+      <button class="carousel-control prev" onclick="moveSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+      <button class="carousel-control next" onclick="moveSlide(1)" aria-label="Next Slide">&#10095;</button>
+    </section>
+  
+    <!-- Link to external JavaScript file -->
+    <script src="scripts/script.js"></script>
+  
+    <section id="About" class="content-section">
       <h1>Allan Muir</h1>
       <p>Frontend Developer</p>
       <button onclick="downloadCV()">Download CV</button>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/allan-muir-627455116/" target="_blank">
-          <img src="./resummeeeeee/assets/linkedin.png" alt="LinkedIn" class="social-icon">
-        </a>
-        <a href="https://github.com/muirallan" target="_blank">
-          <img src="./resummeeeeee/assets/github.png" alt="GitHub" class="social-icon">
-        </a>
-      </div>
-      <p>Welcome to a passionate frontend developer from Jamaica with a talent for design and interactivity. I’m always eager to explore new technology, thrive on building apps and projects from the ground up, and am highly dedicated to solving complex problems. <strong>I have a deep interest in AI</strong>, focusing on creating and tailoring intelligent solutions to fit various needs. I prioritize user experience and am known for my strong work ethic. Additionally, I enjoy jogging and am a big fan of rock, pop, and EDM music.</p>
+      <p>Welcome to a passionate frontend developer from Jamaica with a talent for design and interactivity. I’m always eager to explore new technology, thrive on building apps and projects from the ground up, and am highly dedicated to solving complex problems. <strong>I have a deep interest in AI</strong>, focusing on creating and tailoring intelligent solutions to fit various needs. I prioritize user experience and am known for my strong work ethic. Additionally, I enjoy jogging and am a big fan of rock, pop, and EDM music.
+      </p>
     </section>
+  
+  
+  
+    <!-- Experience Section -->
+    <section id="experience" class="content-section">
+      <h2>Experience</h2>
+      <div class="experience-container">
+        <div class="experience-item">
+          <img src="/resummeeeeee/assets/experience.png" alt="Frontend Development Icon" class="experience-icon">
+          <div class="experience-details">
+            <h3>Frontend Development</h3>
+            <p>Over 3 years of experience developing responsive and accessible web applications.</p>
+            <p><strong>Key Technologies:</strong> HTML, CSS, JavaScript, React, Bootstrap, SASS. Openai api, Azure api, Google api, Yolo 8, Flask, Python</p>
+            </div>
+            </div>
+            <div class="experience-item">
+              <img src="/resummeeeeee/assets/Education.png" alt="Education Icon" class="experience-icon">
+              <div class="experience-details">
+                <h3>Education</h3>
+                <p>B.Sc. in IT and M.Sc. in Computer Science, with a focus on software engineering and algorithms.</p>
+                <p><strong>Notable Coursework:</strong> Machine Learning,Vison AI Advanced JavaScript.</p>
+              </div>
+            </div>  
 
-  <!-- Experience Section -->
-<section id="experience" class="content-section">
-  <h2>Experience</h2>
-  <div class="experience-container">
-    <!-- Experience Item 1 -->
-    <div class="experience-item">
-      <img src="./resummeeeeee/assets/experience.png" alt="Experience icon" class="experience-icon" />
-      <h3>Frontend Development</h3>
-      <p>With 2+ years of experience, I am proficient in HTML, CSS, JavaScript, and have experience with React, Node.js, and more.</p>
-    </div>
-    <!-- Experience Item 2 -->
-    <div class="experience-item">
-      <img src="./resummeeeeee/assets/education.png" alt="Education icon" class="experience-icon" />
-      <h3>Education</h3>
-      <p>B.Sc. in Information Technology and an M.Sc. in Computer Science, providing a solid foundation for my technical skills.</p>
-    </div>
-  </div>
-</section>
 
+          </div>
+        </section>
+      
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+          <h2>Projects</h2>
+          <div class="projects-container">
+            <div class="project-card">
+              <img src="/resummeeeeee/Felix_AI.jpg" alt="Education Icon" class="experience-icon">
+              <h3>Felix AI</h3>
+              <p>Felix AI, an AI-driven virtual assistant tailored to enhance student success at the University of the District of Columbia (UDC). Utilizing a custom-built knowledge base, the "Felix Food" dataset, Felix AI is configured to leverage various AI backends, including OpenAI’s ChatGPT-4 API, Azure OpenAI API, and Google API, each evaluated for effectiveness in delivering personalized support. Recognizing limitations in UDC's existing website, which students identified as unreliable, this project emphasizes how AI-based solutions can improve accessibility, provide accurate guidance, and ultimately increase engagement with university resources. Felix AI’s modular architecture and Retrieval-Augmented Generation (RAG) system allow it to dynamically provide personalized responses while achieving a 90% success rate in query handling.</p>
+              <p><strong>Technologies:</strong> JavaScript, openai api, azure api, google api, html, yolo8, css flask, Python</p>
+              <a href="https://trello.com/b/pTsAeKdl/senior-project-felix-ai" class="project-link">View Project</a>
+            </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="content-section project-cards">
-      <div class="project-card">
-        <img src="./resummeeeeee/assets/INotus_logoUDC 2.png" alt="INotus Project" class="project-image">
-        <h3>INotus</h3>
-        <p>A productivity app for note-taking.</p>
-        <a href="inotus.html" class="btn project-btn">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="./resummeeeeee/assets/deliber eats logo.png" alt="Deliber Eats Project" class="project-image">
-        <h3>Deliber Eats</h3>
-        <p>A food delivery app with a social twist.</p>
-        <a href="deliber-eats.html" class="btn project-btn">View Project</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Contact Section with Form -->
-  <section id="contact" class="content-section">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xrbgppok" method="POST" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="_replyto" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-      <label>
-        Upload a  file (optional):
-        <input type="file" name="upload">
-      </label>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Thank you for reaching out! I look forward to connecting with you and discussing how we can work together.</p>
-  </section>
-
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 Allan Muir. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Dialogflow Chatbot Integration -->
-  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-  <df-messenger
-    intent="WELCOME"
-    chat-icon="https://upload.wikimedia.org/wikipedia/commons/4/4e/Help_icon.png"
-    chat-title="Allan's Assistant"
-    agent-id="3f632e59-949c-49d9-a314-6cbce359db23"
-    language-code="en"
-    project-id="bubbly-dynamo-404601">
-  </df-messenger>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-</body>
-</html>
+            <div class="project-card">
+              <img src="/resummeeeeee/DALL·E 2025-01-05 11.54.15 - Create a modern logo for 'Modern Vision AI', an automated identification system. The design should feature a sleek, futuristic aesthetic with a combin.webp" alt="Education Icon" class="experience-icon">
+              <h3>Modern Vision AI</h3>
+              <p>A system for the automated identification of UDC (University of the District of Columbia) student members of a royal court using YOLOv8 for object detection and ChatGPT for contextual reasoning. The system leverages YOLOv8’s real-time detection capabilities to recognize royal court-specific attire, accessories, and context (e.g., ballons, backpacks, crowns, robes, scepters). At the same time, ChatGPT interprets this data to confirm membership status and determine if the individuals are students. This project finds applications in educational institutions, ceremonial events, and automated attendee analysis systems. </p>
+              <p><strong>Technologies:</strong>  Jupter notebook,Python, Flask,chatgpt API,yolo8</p>
+              <a href="https://github.com/muirallan/Final-Project-Modern-Vision-AI" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+              <img src="/resummeeeeee/Hydro-Harvest.png" alt="Education Icon" class="experience-icon">
+              <h3>HYDRO-GROVE: EMPOWERING FARMERS WITH NASA DATA</h3>
+              <p>Hydro-Grove enhances risk management and sustainability with customizable dashboards, expert guidance, and field observation integration. It's designed to bridge the gap between NASA's vast datasets and farmers' practical needs, ensuring global resilience and improving food security. Hydro-Grove: Harnessing space tech for more innovative farming.</p>
+              <p><strong>Technologies:</strong> ,HTML, CSS, JavaScript, Stripe API</p>
+              <a href="https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/udc-firebirds1/?tab=project" class="project-link">View Project</a>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Contact Section with Form -->
+        <section id="contact" class="content-section">
+          <h2>Contact Me</h2>
+          <div class="contact-form-container">
+            <form action="https://formspree.io/f/xrbgppok" method="POST" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+            <p class="thank-you-text">Thank you for reaching out! I look forward to connecting with you.</p>
+          </div>
+        </section>
+      
+        <!-- Footer Section -->
+        <footer>
+          <p>&copy; 2024 Allan Muir. All Rights Reserved.</p>
+        </footer>
+      
+        <!-- Dialogflow Chatbot Integration -->
+        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+        <df-messenger
+          intent="WELCOME"
+          chat-icon="https://upload.wikimedia.org/wikipedia/commons/4/4e/Help_icon.png"
+          chat-title="Allan's Assistant"
+          agent-id="3f632e59-949c-49d9-a314-6cbce359db23"
+          language-code="en"
+          project-id="bubbly-dynamo-404601">
+        </df-messenger>
+      
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+      </body>
+      </html>
